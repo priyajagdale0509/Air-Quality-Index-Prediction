@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AQI Index Prediction</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTmukqJNOgx-UPmEaSAJnY1SS6f6c9-p7yH4w&usqp=CAU'); /* Replace with your online image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            color: rgb(7, 7, 7); /* Adjust text color for better visibility on the background image */
+            height: 100vh; /* Ensure the background covers the entire viewport */
+            margin: 0; /* Remove default margin to cover the entire viewport */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent white background for better text visibility */
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form action='/predict' method="POST">
+        <!-- ... other form elements ... -->
+    
+        <div class="form-group">
+            <label for="pm2.5">PM25:</label>
+            <input type="text" class="form-control" id="pm2.5" name="pm25" placeholder="Enter PM2.5">
+        </div>
+    
+        <div class="form-group">
+            <label for="pm10">PM10:</label>
+            <input type="text" class="form-control" id="pm10" name="pm10" placeholder="Enter PM10">
+        </div>
+    
+        <div class="form-group">
+            <label for="no2">NO2:</label>
+            <input type="text" class="form-control" id="no2" name="no2" placeholder="Enter NO2">
+        </div>
+        Air Quality Index: {{result}} <br>
+        <input type='submit' value='Predict'>
+    </form>
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    
+
+</body>
+</html>
